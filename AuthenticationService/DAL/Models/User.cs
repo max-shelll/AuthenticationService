@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AuthenticationService.Models
+namespace AuthenticationService.DAL.Models
 {
     public class User
     {

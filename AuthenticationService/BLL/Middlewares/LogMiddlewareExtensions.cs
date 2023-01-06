@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 
-namespace AuthenticationService.Middlewares
+namespace AuthenticationService.BLL.Middlewares
 {
     public static class LogMiddlewareExtensions
     {

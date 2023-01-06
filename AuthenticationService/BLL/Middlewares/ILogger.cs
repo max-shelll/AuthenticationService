@@ -1,4 +1,4 @@
-﻿namespace AuthenticationService.Middlewares
+﻿namespace AuthenticationService.BLL.Middlewares
 {
     public interface ILogger
     {

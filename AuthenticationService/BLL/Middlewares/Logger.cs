@@ -1,10 +1,9 @@
-﻿using AuthenticationService.Models;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 using System;
 using System.IO;
 using System.Threading;
 
-namespace AuthenticationService.Middlewares
+namespace AuthenticationService.BLL.Middlewares
 {
     public class Logger : ILogger
     {

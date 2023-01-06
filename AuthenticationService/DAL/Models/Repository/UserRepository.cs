@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AuthenticationService.Models.Repository
+namespace AuthenticationService.DAL.Models.Repository
 {
     public class UserRepository : IUserRepository
     {

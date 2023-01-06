@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System.Threading.Tasks;
 
-namespace AuthenticationService.Middlewares
+namespace AuthenticationService.BLL.Middlewares
 {
     public class LogMiddleware
     {

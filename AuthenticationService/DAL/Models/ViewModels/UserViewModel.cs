@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net.Mail;
 
-namespace AuthenticationService.Models.ViewModel
+namespace AuthenticationService.DAL.Models.ViewModels
 {
     public class UserViewModel
     {
@@ -24,7 +24,7 @@ namespace AuthenticationService.Models.ViewModel
         /// <returns></returns>
         public string GetFullName(string firstName, string lastName)
         {
-            return String.Concat(firstName, " ", lastName);
+            return string.Concat(firstName, " ", lastName);
         }
 
         /// <summary>

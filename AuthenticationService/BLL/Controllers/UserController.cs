@@ -1,8 +1,8 @@
-﻿using AuthenticationService.Exceptions;
-using AuthenticationService.Middlewares;
-using AuthenticationService.Models;
-using AuthenticationService.Models.Repository;
-using AuthenticationService.Models.ViewModel;
+﻿using AuthenticationService.BLL.Exceptions;
+using AuthenticationService.BLL.Middlewares;
+using AuthenticationService.DAL.Models;
+using AuthenticationService.DAL.Models.Repository;
+using AuthenticationService.DAL.Models.ViewModels;
 using AutoMapper;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -14,7 +14,7 @@ using System.Security.Authentication;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace AuthenticationService.Controllers
+namespace AuthenticationService.BLL.Controllers
 {
     [ExceptionHandler]
     [ApiController]
@@ -66,7 +66,7 @@ namespace AuthenticationService.Controllers
         [Route("authenticate")]
         public async Task<UserViewModel> Authenticate(string login, string password)
         {
-            if (String.IsNullOrEmpty(login) || String.IsNullOrEmpty(password))
+            if (string.IsNullOrEmpty(login) || string.IsNullOrEmpty(password))
                 throw new ArgumentNullException("Запрос не корректен");
 
             User user = _userRepository.GetByLogin(login);
@@ -84,12 +84,12 @@ namespace AuthenticationService.Controllers
             };
 
             ClaimsIdentity claimsIdentity = new ClaimsIdentity(
-                claims, 
+                claims,
                 "AppCookie", // Название Claima
-                ClaimsIdentity.DefaultNameClaimType, 
+                ClaimsIdentity.DefaultNameClaimType,
                 ClaimsIdentity.DefaultRoleClaimType);
 
-            
+
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
 
             return _mapper.Map<UserViewModel>(user);
