@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AuthenticationService.PLL
+namespace AuthenticationService
 {
     public class Program
     {

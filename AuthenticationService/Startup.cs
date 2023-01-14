@@ -1,6 +1,7 @@
 using AuthenticationService.BLL;
-using AuthenticationService.BLL.Middlewares;
-using AuthenticationService.DAL.Models.Repository;
+using AuthenticationService.DAL.Repository;
+using AuthenticationService.PLL.Logging;
+using AuthenticationService.PLL.Middlewares;
 using AutoMapper;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
@@ -15,9 +16,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ILogger = AuthenticationService.BLL.Middlewares.ILogger;
+using ILogger = AuthenticationService.PLL.Logging.ILogger;
 
-namespace AuthenticationService.PLL
+namespace AuthenticationService
 {
     public class Startup
     {

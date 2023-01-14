@@ -3,7 +3,7 @@ using System;
 using System.IO;
 using System.Threading;
 
-namespace AuthenticationService.BLL.Middlewares
+namespace AuthenticationService.PLL.Logging
 {
     public class Logger : ILogger
     {

@@ -1,8 +1,8 @@
 ﻿using AuthenticationService.BLL.Exceptions;
-using AuthenticationService.BLL.Middlewares;
-using AuthenticationService.DAL.Models;
-using AuthenticationService.DAL.Models.Repository;
-using AuthenticationService.DAL.Models.ViewModels;
+using AuthenticationService.BLL.Models;
+using AuthenticationService.BLL.ViewModels;
+using AuthenticationService.DAL.Repository;
+using AuthenticationService.PLL.Logging;
 using AutoMapper;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -14,7 +14,7 @@ using System.Security.Authentication;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace AuthenticationService.BLL.Controllers
+namespace AuthenticationService.PLL.Controllers
 {
     [ExceptionHandler]
     [ApiController]

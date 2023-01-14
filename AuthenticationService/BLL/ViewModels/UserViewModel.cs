@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Net.Mail;
+using AuthenticationService.BLL.Models;
 
-namespace AuthenticationService.DAL.Models.ViewModels
+namespace AuthenticationService.BLL.ViewModels
 {
     public class UserViewModel
     {

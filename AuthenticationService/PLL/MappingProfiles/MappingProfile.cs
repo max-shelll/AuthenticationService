@@ -1,8 +1,8 @@
-﻿using AuthenticationService.DAL.Models;
-using AuthenticationService.DAL.Models.ViewModels;
+﻿using AuthenticationService.BLL.Models;
+using AuthenticationService.BLL.ViewModels;
 using AutoMapper;
 
-namespace AuthenticationService.BLL
+namespace AuthenticationService.PLL.MappingProfiles
 {
     public class MappingProfile : Profile
     {
